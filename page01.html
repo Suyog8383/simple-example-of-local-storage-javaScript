@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Enter Name <input type="text" id="input_name" /> <br />
+    <br />
+    Enter Surname<input type="text" id="input_surname" /><br /><br />
+    <button id="submit_btn" onclick="submitData()">Submit</button>
+    <a href="page02.html"> Cart</a>
+  </body>
+</html>
+<script>
+  function submitData() {
+    const fName = document.getElementById("input_name").value;
+    localStorage.setItem("Name", fName);
+    const LName = document.getElementById("input_surname").value;
+    localStorage.setItem("Last Name", LName);
+    console.log(fName);
+    console.log(LName);
+  }
+</script>
